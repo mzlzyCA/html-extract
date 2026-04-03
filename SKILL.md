@@ -1,42 +1,31 @@
 ---
-slug: html-extract
-displayName: HTML Extract
-description: |
-  Extract content from local HTML files and convert to clean Markdown format using MinerU-powered processing. This skill handles HTML content extraction, web content parsing, HTML file processing, and document conversion with high fidelity.
+name: html-extract
+version: 0.2.0
+description: >
+  Extract content from local HTML files and convert to clean Markdown. HTML content extraction, web page content extractor, HTML to Markdown converter, webpage scraping, HTML parser, content grabber, HTML data extraction, web content mining, page content ripper, HTML body extractor, markup content extraction, HTML文件内容提取, 网页提取, HTML提取工具, 本地HTML转换.
 
-  Core capability: Read local HTML files, extract meaningful content (text, tables, lists, headings, links), strip unnecessary markup, and produce well-structured Markdown output. Supports batch processing of multiple HTML files.
+  Use when asked to 'extract content from HTML', 'pull text from a web page', 'convert HTML file to Markdown', 'grab content from HTML', 'get text out of HTML file', 'scrape local HTML', 'extract readable content from HTML'. Also handles: 'how do I extract content from an HTML file?', 'is there a skill that converts HTML to readable text?', 'I want to pull content from saved web pages', 'can my agent read HTML files and extract content?'.
 
-  Use this when you need to: extract text from HTML files, convert HTML documents to Markdown, parse web page content from saved HTML, pull content out of HTML files, get readable text from HTML source, process downloaded web pages, extract article content from HTML, batch convert HTML files.
-
-  Trigger phrases: "extract content from this HTML file", "convert HTML to Markdown", "pull text out of HTML", "parse this HTML page", "get content from HTML file", "read HTML and give me Markdown", "extract from local HTML".
-
-  Problems solved: unreadable HTML source files, need clean text from saved web pages, HTML file content extraction for documentation, converting web archives to readable format, processing HTML exports from web applications.
-
-  Powered by MinerU for intelligent document structure recognition and content extraction.
-
-  HTML内容提取工具，从本地HTML文件中提取内容并转换为Markdown格式。支持网页提取、HTML解析、内容抽取、网页内容解析、HTML文件处理、文档转换、批量HTML处理。使用MinerU驱动的智能文档结构识别。
+  Solves the problem of unreadable raw HTML files, messy markup cluttering your content, inability to quickly get clean text from saved web pages, and difficulty converting HTML documents into structured Markdown. Powered by MinerU document processing engine for accurate content extraction. Works with local HTML files, saved web pages, and HTML documents. Ideal for researchers, content managers, developers, and anyone who needs clean Markdown from HTML source files.
 tags:
-  - html-extraction
+  - html
+  - extract
+  - markdown
   - content-extraction
-  - html-to-markdown
-  - web-content-parsing
-  - html-file-processing
-  - document-conversion
+  - web-scraping
   - html-parser
-  - web-page-extraction
-  - markdown-conversion
+  - converter
+  - document-processing
   - mineru
-  - batch-processing
   - text-extraction
+  - web-content
+  - html-to-markdown
 ---
 
-You are an HTML content extraction specialist. When the user asks to extract content from HTML files or convert HTML to Markdown, use the mineru tool to process the HTML files.
+# HTML Extract
 
-Steps:
-1. Accept the HTML file path(s) from the user.
-2. Use the mineru tool to process each HTML file for content extraction.
-3. Return clean, well-structured Markdown output preserving headings, tables, lists, links, and text hierarchy.
-4. Handle multiple files if requested, processing them in sequence.
-5. Report any errors or issues with specific files clearly.
+Extract content from local HTML files and convert to clean, readable Markdown using MinerU.
 
-Always preserve document structure and formatting. Strip ads, navigation, scripts, and non-content elements. Focus on extracting the meaningful body content.
+## Usage
+
+Use the mineru tool to extract content from HTML files. Provide the local HTML file path and receive clean Markdown output with preserved structure, headings, links, and formatting.
