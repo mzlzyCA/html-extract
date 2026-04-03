@@ -1,31 +1,59 @@
 ---
 name: html-extract
-version: 0.2.0
-description: >
-  Extract content from local HTML files and convert to clean Markdown. HTML content extraction, web page content extractor, HTML to Markdown converter, webpage scraping, HTML parser, content grabber, HTML data extraction, web content mining, page content ripper, HTML body extractor, markup content extraction, HTML文件内容提取, 网页提取, HTML提取工具, 本地HTML转换.
-
-  Use when asked to 'extract content from HTML', 'pull text from a web page', 'convert HTML file to Markdown', 'grab content from HTML', 'get text out of HTML file', 'scrape local HTML', 'extract readable content from HTML'. Also handles: 'how do I extract content from an HTML file?', 'is there a skill that converts HTML to readable text?', 'I want to pull content from saved web pages', 'can my agent read HTML files and extract content?'.
-
-  Solves the problem of unreadable raw HTML files, messy markup cluttering your content, inability to quickly get clean text from saved web pages, and difficulty converting HTML documents into structured Markdown. Powered by MinerU document processing engine for accurate content extraction. Works with local HTML files, saved web pages, and HTML documents. Ideal for researchers, content managers, developers, and anyone who needs clean Markdown from HTML source files.
-tags:
-  - html
-  - extract
-  - markdown
-  - content-extraction
-  - web-scraping
-  - html-parser
-  - converter
-  - document-processing
-  - mineru
-  - text-extraction
-  - web-content
-  - html-to-markdown
+description: "HTML Extract - extract text and content from local HTML files to Markdown using MinerU. For live web page URLs, use url-to-markdown (crawl) instead."
+homepage: https://mineru.net
+metadata: {"openclaw": {"emoji": "📄", "requires": {"bins": ["mineru-open-api"], "env": ["MINERU_TOKEN"]}, "primaryEnv": "MINERU_TOKEN", "install": [{"id": "npm", "kind": "node", "package": "mineru-open-api", "bins": ["mineru-open-api"], "label": "Install via npm"}, {"id": "go", "kind": "go", "package": "github.com/opendatalab/MinerU-Ecosystem/cli/mineru-open-api", "bins": ["mineru-open-api"], "label": "Install via go install", "os": ["darwin", "linux"]}]}}
 ---
 
 # HTML Extract
 
-Extract content from local HTML files and convert to clean, readable Markdown using MinerU.
+Extract text and content from local HTML files to Markdown using MinerU. For live web page URLs, use `mineru-open-api crawl`.
 
-## Usage
+## Install
 
-Use the mineru tool to extract content from HTML files. Provide the local HTML file path and receive clean Markdown output with preserved structure, headings, links, and formatting.
+```bash
+npm install -g mineru-open-api
+# or via Go (macOS/Linux):
+go install github.com/opendatalab/MinerU-Ecosystem/cli/mineru-open-api@latest
+```
+
+## Quick Start
+
+```bash
+# Extract from a local HTML file (requires token)
+mineru-open-api extract page.html -o ./out/
+
+# Extract from a remote HTML URL (requires token)
+mineru-open-api extract https://example.com/page.html -o ./out/
+
+# Extract web page content via crawl (requires token)
+mineru-open-api crawl https://example.com/article -o ./out/
+
+# With language hint
+mineru-open-api extract page.html --language en -o ./out/
+```
+
+## Authentication
+
+Token required:
+
+```bash
+mineru-open-api auth             # Interactive token setup
+export MINERU_TOKEN="your-token" # Or via environment variable
+```
+
+Create token at: https://mineru.net/apiManage/token
+
+## Capabilities
+
+- Supported input: local .html file or remote HTML URL
+- HTML requires `extract` (token required) — not supported by `flash-extract`
+- For live web pages, use `mineru-open-api crawl <URL>` (also requires token)
+- Language hint with `--language` (default: `ch`, use `en` for English)
+
+## Notes
+
+- HTML is NOT supported by `flash-extract` — always use `extract` or `crawl`
+- Output goes to stdout by default; use `-o <dir>` to save to a file or directory
+- All progress/status messages go to stderr; document content goes to stdout
+- MinerU is open-source by OpenDataLab (Shanghai AI Lab): https://github.com/opendatalab/MinerU
