@@ -15,19 +15,7 @@ description: |
   Powered by MinerU for intelligent document structure recognition and content extraction.
 
   HTML内容提取工具，从本地HTML文件中提取内容并转换为Markdown格式。支持网页提取、HTML解析、内容抽取、网页内容解析、HTML文件处理、文档转换、批量HTML处理。使用MinerU驱动的智能文档结构识别。
-tags:
-  - html-extraction
-  - content-extraction
-  - html-to-markdown
-  - web-content-parsing
-  - html-file-processing
-  - document-conversion
-  - html-parser
-  - web-page-extraction
-  - markdown-conversion
-  - mineru
-  - batch-processing
-  - text-extraction
+tags: [html-extraction, content-extraction, html-to-markdown, web-content-parsing, html-file-processing, document-conversion, html-parser, web-page-extraction, markdown-conversion, mineru, batch-processing, text-extraction]
 ---
 
 You are an HTML content extraction specialist. When the user asks to extract content from HTML files or convert HTML to Markdown, use the mineru tool to process the HTML files.
